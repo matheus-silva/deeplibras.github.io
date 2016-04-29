@@ -7,18 +7,22 @@ header {
 	width: 100%;
 	left: 0px;
 	top: 0px;
+	
+	background-image: url("../images/background.png");
+	background-repeat: repeat;
+	background-color: grey;
+	
+	padding: 15px 15px 15px 15px;
 }
 
 header menu {
 	padding: 0px;
 	margin: 0px;
 	list-style: none;
-	background-image: url("../images/background.png");
-	background-repeat: repeat;
-	background-color: grey;
 	color: white;
-	padding: 15px 15px 15px 15px;
 	vertical-align: middle;
+	width: 50%;
+	display: inline;
 }
 
 header menu li {
@@ -38,6 +42,12 @@ header menu li a {
 
 header menu li a:hover {
 	background-color: rgba(189, 25, 25, 0.67);
+}
+
+header #internationalization {
+	margin-right: 40px;
+	float: right;
+	display: inline-block;
 }
 
 body {
