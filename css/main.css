@@ -58,11 +58,19 @@ body {
 	background-repeat: repeat;
 }
 
-body .title {
+body .odd {
 	background-color: #1B7CA5;
+	color: white;
+}
+
+body .even {
+	background-color: #white;
+	color: black;
+}
+
+body .content {
 	background-image: url("../images/background.png");
 	background-repeat: repeat;
-	color: white;
 	text-align: center;
 	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 	border-top: 3px solid rgba(189, 25, 25, 0.67);
@@ -70,23 +78,23 @@ body .title {
 	margin-top: 59px;
 }
 
-body .title .image-container img.logo {
+body .content .image-container img.logo {
 	width: 25em;
 	max-width: 95%;
 	padding: 15px;
 }
 
-body .title .image-container img.steps {
+body .content .image-container img.steps {
 	width: 50em;
 	max-width: 95%;
 	display: inline-block;
 }
 
-body .title h2 {
+body .content h1 {
 	font-size: 2em;
 }
 
-body .title .content {
+body .content .two-column {
 	margin: auto;
 	width: 97%;
 	border-top: 4px double;
@@ -94,7 +102,7 @@ body .title .content {
 	vertical-align: top;
 }
 
-body .title .content p {
+body .content .two-column p {
 	vertical-align: top;
 	width: 45%; 
 	display: inline-block; 
@@ -103,6 +111,8 @@ body .title .content p {
 	font-size: 100%;
 	line-height: 150%;
 }
+
+body .
 
 footer {
 	position: fixed;
