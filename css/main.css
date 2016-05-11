@@ -7,6 +7,7 @@ header {
 	width: 100%;
 	left: 0px;
 	top: 0px;
+	height: 30px;
 	
 	background-image: url("../images/background.png");
 	background-repeat: repeat;
@@ -53,6 +54,8 @@ header #internationalization {
 body {
 	margin: 0px;
 	padding: 0px;
+	padding-bottom: 50px;
+	padding-top: 60px;
 	background-color: #1B7CA5;
 	background-image: url("../images/background.png");
 	background-repeat: repeat;
@@ -61,27 +64,28 @@ body {
 body .odd {
 	background-color: #1B7CA5;
 	color: white;
+	background-image: url("../images/background.png");
+	background-repeat: repeat;
+	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
 
 body .even {
-	background-color: #white;
+	background-color: white;
 	color: black;
 }
 
 body .content {
-	background-image: url("../images/background.png");
-	background-repeat: repeat;
 	text-align: center;
-	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 	border-top: 3px solid rgba(189, 25, 25, 0.67);
-	padding: 15px;
-	margin-top: 59px;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
 }
 
 body .content .image-container img.logo {
 	width: 25em;
 	max-width: 95%;
-	padding: 15px;
 }
 
 body .content .image-container img.steps {
@@ -102,17 +106,18 @@ body .content .two-column {
 	vertical-align: top;
 }
 
-body .content .two-column p {
-	vertical-align: top;
-	width: 45%; 
-	display: inline-block; 
-	padding: 5px;
+body .content p, body .content * p {
 	text-align: left;
 	font-size: 100%;
 	line-height: 150%;
 }
 
-body .
+body .content .two-column p {
+	vertical-align: top;
+	width: 45%; 
+	display: inline-block; 
+	padding: 5px;
+}
 
 footer {
 	position: fixed;
@@ -120,11 +125,15 @@ footer {
 	left: 0px;
 	border-top: 3px solid rgba(189, 25, 25, 0.67);	
 	background-color: #f0f0f0;
-	color: #7f8c9c;
+	color: black;
 	width: 100%;
 	padding: 0px;
 }
 
 footer p {
 	padding-left: 5px;
+}
+
+img.wrap-text {
+	float: left; margin: 0px 10px 5px 0px;
 }
