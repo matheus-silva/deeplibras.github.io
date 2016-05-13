@@ -24,7 +24,7 @@ $(function() {
 		});
 		
 		var videoFrame = $('<iframe width="560" height="315" ' +
-						   'src="https://www.youtube.com/embed/1aPL9RNFSoM?autoplay=1"' + 
+						   'src="https://www.youtube.com/embed/1aPL9RNFSoM?autoplay=1" ' + 
 						   'frameborder="0" allowfullscreen></iframe>');
 		
 		$(videoFrame).css({display: "block", margin: "0% auto 0 auto"});
@@ -44,4 +44,11 @@ $(function() {
 		
 		return false;
 	});
+	
+	$('#fullpage').fullpage({
+        anchors:['about', 'event'],
+        sectionSelector: 'section',
+        navigation: true
+    });
+	
 });

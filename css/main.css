@@ -1,4 +1,4 @@
-header, body, footer {
+html {
 	font-family: "Raleway";
 }
 
@@ -14,9 +14,11 @@ header {
 	background-color: grey;
 	
 	padding: 15px 15px 15px 15px;
+	
+	z-index: 1000000;
 }
 
-header menu {
+menu {
 	padding: 0px;
 	margin: 0px;
 	list-style: none;
@@ -26,13 +28,13 @@ header menu {
 	display: inline;
 }
 
-header menu li {
+menu li {
 	display: inline;
 	padding: 15px;
 	vertical-align: middle;	
 }
 
-header menu li a {
+menu li a {
   color: #314559;
   padding: 10px;
   text-decoration: none;
@@ -41,11 +43,11 @@ header menu li a {
   padding: 10px;
 }
 
-header menu li a:hover {
+menu li a:hover {
 	background-color: rgba(189, 25, 25, 0.67);
 }
 
-header #internationalization {
+#internationalization {
 	margin-right: 40px;
 	float: right;
 	display: inline-block;
@@ -61,7 +63,7 @@ body {
 	background-repeat: repeat;
 }
 
-body .odd {
+.odd {
 	background-color: #1B7CA5;
 	color: white;
 	background-image: url("../images/background.png");
@@ -69,36 +71,40 @@ body .odd {
 	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
 
-body .even {
-	background-color: white;
-	color: black;
+.even {
+	color: white;
+	background-image: url("../images/background-black.png");
+	background-repeat: repeat;
+	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
 
-body .content {
+.content {
+	page-break-after:always;
 	text-align: center;
 /* 	border-top: 3px solid rgba(189, 25, 25, 0.67); */
-	padding-top: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 10px;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 90%;
+	height: 99%;
+	padding-top: 1%;
 }
 
-body .content .image-container img.logo {
+.content .image-container img.logo {
 	width: 25em;
 	max-width: 95%;
 }
 
-body .content .image-container img.steps {
+.content .image-container img.steps {
 	width: 50em;
 	max-width: 95%;
 	display: inline-block;
 }
 
-body .content h1 {
+.content h1 {
 	font-size: 2em;
 }
 
-body .content .two-column {
+.content .two-column {
 	margin: auto;
 	width: 97%;
 	border-top: 4px double;
@@ -106,13 +112,13 @@ body .content .two-column {
 	vertical-align: top;
 }
 
-body .content p, body .content * p {
+.content p, body .content * p {
 	text-align: left;
 	font-size: 100%;
 	line-height: 150%;
 }
 
-body .content .two-column p {
+.content .two-column p {
 	vertical-align: top;
 	width: 45%; 
 	display: inline-block; 
