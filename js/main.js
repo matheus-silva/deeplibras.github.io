@@ -45,10 +45,10 @@ $(function() {
 		return false;
 	});
 	
-	$('#fullpage').fullpage({
-        anchors:['about', 'event'],
-        sectionSelector: 'section',
-        navigation: true
-    });
+//	$('#fullpage').fullpage({
+//        anchors:['about', 'event'],
+//        sectionSelector: 'section',
+//        navigation: true
+//    });
 	
 });
