@@ -1,92 +1,82 @@
-html {
+html, body {
+	background-image: url("../images/background-collaboration.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
 	font-family: "Raleway";
+	
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	
+	display: block;
 }
 
-header {
-	position: fixed;
-	width: 100%;
-	left: 0px;
-	top: 0px;
-	height: 30px;
-	
-	background-image: url("../images/background.png");
-	background-repeat: repeat;
-	background-color: grey;
-	
-	padding: 15px 15px 15px 15px;
-	
-	z-index: 1000000;
+body div {
+	display: block;
 }
 
-menu {
+.container {
+	position: relative;
+	min-height: 100%;
+}
+
+.header {
+	padding: 15px;
+	text-align: right;
+}
+
+.header menu {
 	padding: 0px;
 	margin: 0px;
 	list-style: none;
-	color: white;
 	vertical-align: middle;
 	width: 50%;
 	display: inline;
+	color: #314559;
 }
 
-menu li {
+.header menu li {
 	display: inline;
 	padding: 15px;
-	vertical-align: middle;	
+	vertical-align: middle;
 }
 
-menu li a {
-  color: #314559;
-  padding: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  padding: 10px;
+.header menu li a {
+	padding: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px;
+	color: #314559;
 }
 
-menu li a:hover {
-	background-color: rgba(189, 25, 25, 0.67);
+.header menu li a:hover {
+	background-color: #832e4f;
+	color: white;
 }
 
-#internationalization {
+.header .flags {
+	display: inline-block;
 	margin-right: 40px;
 	float: right;
-	display: inline-block;
-}
-
-body {
-	margin: 0px;
-	padding: 0px;
-	padding-bottom: 50px;
-	padding-top: 60px;
-	background-color: #1B7CA5;
-	background-image: url("../images/background.png");
-	background-repeat: repeat;
-}
-
-.odd {
-	background-color: #1B7CA5;
-	color: white;
-	background-image: url("../images/background.png");
-	background-repeat: repeat;
-	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
-}
-
-.even {
-	color: white;
-	background-image: url("../images/background-black.png");
-	background-repeat: repeat;
-	text-shadow: #494f57 1px 1px, #494f57 2px 2px;
 }
 
 .content {
-	page-break-after:always;
+	padding-top: 10px;
+	padding-bottom: 60px; /* Height of the footer */
+}
+
+.content .image-container {
+	background-image: url("../images/pattern.jpg");
+	background-repeat: repeat;
+	background-color: #933b51;
+	padding-bottom: 20px;
 	text-align: center;
-/* 	border-top: 3px solid rgba(189, 25, 25, 0.67); */
-	padding-left: 5%;
-	padding-right: 5%;
-	width: 90%;
-	height: 99%;
-	padding-top: 1%;
+	padding-top: 20px;
+	margin: 0px;
+	width: 100%;
+	color: white;
 }
 
 .content .image-container img.logo {
@@ -94,70 +84,64 @@ body {
 	max-width: 95%;
 }
 
-.content .image-container img.steps {
-	width: 50em;
-	max-width: 95%;
+.content .image-container h1 {
+	margin: 0px;
+	padding: 0px;
+	margin-top: 20px;
+}
+
+.content .box-container {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.content .box-container .box {
+	background-size: 100% 100%;
+	width: 300px;
+	height: 200px;
 	display: inline-block;
-}
-
-.content h1 {
-	font-size: 2em;
-}
-
-.content .two-column {
-	margin: auto;
-	width: 97%;
-	border-top: 4px double;
-	border-bottom: 4px double;
 	vertical-align: top;
+	background-color: rgba(200, 200, 200, .4);
+	margin: 15px;
+	border-radius: 5px;
+	padding: 10px;
 }
 
-.content p, body .content * p {
-	text-align: left;
-	font-size: 100%;
-	line-height: 150%;
-}
-
-.content .two-column p {
-	vertical-align: top;
-	width: 45%; 
-	display: inline-block; 
-	padding: 5px;
-}
-
-footer {
-	position: fixed;
-	bottom: 0px;
-	left: 0px;
-	border-top: 3px solid rgba(189, 25, 25, 0.67);	
-	background-color: #f0f0f0;
-	color: black;
+.content .box-container .box h1 {
+	font-size: large;
+	font-weight: bold;
 	width: 100%;
-	padding: 0px;
+	text-align: center;
+	color: #cc0000;
+	padding-bottom: 5px;
 }
 
-footer p {
-	padding-left: 5px;
+.content .box-container .box p {
+	font-size: medium;
+	text-align: left;
+	line-height: 1.5;
 }
 
-img.wrap-text {
-	float: left; margin: 0px 10px 5px 0px;
+.content .box-container .box a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #832e4f;
 }
 
-button.accessibility {
+.footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 60px; /* Height of the footer */
+	color: white;
+}
+
+.footer p {
 	background-color: transparent;
-	border: 0;
-	margin: 0;
-	padding: 0px;
-}
-
-a.boxclose {
-	display: block;
-    background-image: url("../images/close.png");
-    background-size: 24px 24px;
-    text-decoration: none;
-    width: 24px;
-    height: 24px;
-/*     margin-left: 95%; */
-    padding: 0;
+	border-top: 1px solid #eee;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: small;
+	padding: 5px;
+	width: 90%;
 }
