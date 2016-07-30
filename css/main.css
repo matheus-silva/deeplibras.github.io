@@ -101,10 +101,11 @@ body div {
 	height: 200px;
 	display: inline-block;
 	vertical-align: top;
-	background-color: rgba(200, 200, 200, .4);
 	margin: 15px;
-	border-radius: 5px;
 	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(25, 25, 25, .25);
+	color: white;
 }
 
 .content .box-container .box h1 {
@@ -112,20 +113,25 @@ body div {
 	font-weight: bold;
 	width: 100%;
 	text-align: center;
-	color: #cc0000;
+	color: white;
 	padding-bottom: 5px;
+	border-bottom: 1px solid white;
+	text-shadow: -1px 1px #333333;
 }
 
 .content .box-container .box p {
 	font-size: medium;
 	text-align: left;
 	line-height: 1.5;
+	text-shadow: -1px 1px gray;
+	color: white;
 }
 
 .content .box-container .box a {
 	text-decoration: none;
 	font-weight: bold;
-	color: #832e4f;
+	color: #CC0000;
+	text-shadow: none;
 }
 
 .footer {

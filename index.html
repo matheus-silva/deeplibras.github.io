@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript">
+	var lang = window.navigator.languages ? window.navigator.languages[0]
+			: null;
+	lang = lang || window.navigator.language
+			|| window.navigator.browserLanguage
+			|| window.navigator.userLanguage;
+	
+	if (lang.indexOf('-') !== -1)
+		lang = lang.split('-')[0];
+
+	if (lang.indexOf('_') !== -1)
+		lang = lang.split('_')[0];
+
+	if (lang === "pt")
+		window.location = "./pt/";
+	else
+		window.location = "./en/"
+</script>
+</head>
+<body>
+Loading...
+</body>
+</html>
