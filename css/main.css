@@ -3,17 +3,13 @@ html, body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
+
 	font-family: "Raleway";
-	
+
 	padding: 0px;
 	margin: 0px;
 	height: 100%;
 	
-	display: block;
-}
-
-body div {
 	display: block;
 }
 
@@ -22,19 +18,23 @@ body div {
 	min-height: 100%;
 }
 
+/*********************************************
+ * Header
+ *********************************************/
+
 .header {
 	padding: 15px;
 	text-align: right;
 }
 
 .header menu {
-	padding: 0px;
-	margin: 0px;
-	list-style: none;
 	vertical-align: middle;
-	width: 50%;
+	list-style: none;
 	display: inline;
 	color: #314559;
+	padding: 0px;
+	margin: 0px;
+	width: 50%;
 }
 
 .header menu li {
@@ -56,18 +56,22 @@ body div {
 	color: white;
 }
 
+.header menu li a.active {
+	background-color: #832e4f;
+	color: white;
+}
+
 .header .flags {
 	display: inline-block;
 	margin-right: 40px;
 	float: right;
 }
 
-.content {
-	padding-top: 10px;
-	padding-bottom: 60px; /* Height of the footer */
-}
+/*********************************************
+ * Title
+ *********************************************/
 
-.content .image-container {
+.image-container {
 	background-image: url("../images/pattern.jpg");
 	background-repeat: repeat;
 	background-color: #933b51;
@@ -79,16 +83,26 @@ body div {
 	color: white;
 }
 
-.content .image-container img.logo {
+.image-container img.logo {
 	width: 25em;
 	max-width: 95%;
 }
 
-.content .image-container h1 {
+.image-container h1 {
 	margin: 0px;
 	padding: 0px;
 	margin-top: 20px;
 }
+
+/*********************************************
+ * Content
+ *********************************************/
+
+.content {
+	padding-top: 10px;
+	padding-bottom: 60px; /* Height of the footer */
+}
+
 
 .content .box-container {
 	text-align: center;
@@ -104,7 +118,7 @@ body div {
 	margin: 15px;
 	padding: 10px;
 	border-radius: 10px;
-	background-color: rgba(25, 25, 25, .25);
+	background-color: rgba(255, 225, 225, .5);
 	color: white;
 }
 
@@ -113,18 +127,15 @@ body div {
 	font-weight: bold;
 	width: 100%;
 	text-align: center;
-	color: white;
+	color: #832e4f;
 	padding-bottom: 5px;
-	border-bottom: 1px solid white;
-	text-shadow: -1px 1px #333333;
 }
 
 .content .box-container .box p {
 	font-size: medium;
-	text-align: left;
+	text-align: center;
 	line-height: 1.5;
-	text-shadow: -1px 1px gray;
-	color: white;
+	color: black;
 }
 
 .content .box-container .box a {
@@ -133,6 +144,10 @@ body div {
 	color: #CC0000;
 	text-shadow: none;
 }
+
+/*********************************************
+ * Footer
+ *********************************************/
 
 .footer {
 	position: absolute;
@@ -151,3 +166,123 @@ body div {
 	padding: 5px;
 	width: 90%;
 }
+
+/*********************************************
+ * Team
+ *********************************************/
+ .team {
+ 	display: block;
+ 	text-align: center;
+ }
+ 
+ .team .role-group {
+ 	display: block;
+ }
+ 
+ .team .role-group h1 {
+ 	font-size: x-large;
+ }
+ 
+.team .role-group figure {
+  background-color: transparent;
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+  height: 150px;	
+  padding: 5px; 
+  vertical-align: top;
+}
+
+.team .role-group figure img {
+	display: block;
+	height: 100px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	border-radius: 100%;
+}
+ 
+.team .role-group figure figcaption {
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  color: #3333333;
+  font-weight: bold;
+  height: 40px;
+  display: block;
+  font-size: 10pt;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*********************************************
+ * Contact
+ *********************************************/
+ .contact {
+ 	margin-top: 15px;
+ 	display: block;
+ 	text-align: center;
+ }
+ 
+ .contact ul, .contact iframe {
+ 	vertical-align: top;
+ 	margin-top: 10px;
+ }
+ 
+ .contact ul {
+	width: 45%;
+	display: inline-block;
+	padding: 10px;
+	padding-top: 0px;
+	background-color: rgba(200, 200, 200, 0.45);
+	border-radius: 10px;
+	min-width: 400px;
+	height: 250px;
+ }
+ 
+ .contact ul li {
+ 	padding: 0px;
+ 	display: block;
+ 	text-align: left;
+ 	padding-left: 40px;
+ 	vertical-align: middle;
+	background-position: left top;
+ 	font-size: medium;
+ 	margin-top: 10px;
+ 	min-height: 24px;
+ 	
+ }
+ 
+ .contact ul li.title {
+ 	padding-left: 0px;
+ }
+ 
+ .contact ul li.email {
+ 	background-image: url("../images/email.png");
+ 	background-repeat: no-repeat;
+ }
+ 
+ .contact ul li.phone {
+ 	background-image: url("../images/phone.png");
+ 	background-repeat: no-repeat;
+ }
+ 
+ .contact ul li.address {
+ 	background-image: url("../images/address.png");
+ 	background-repeat: no-repeat;
+ 	line-height: 1.5;
+ }
+ 
+ .contact .map {
+ 	height: 200px;
+ 	width: 45%;
+ 	border: 0px;
+ 	display: inline-block;
+ 	border: 5px solid white;
+ 	border-radius: 10px;
+ 	min-width: 400px;
+ 	height: 250px;
+ }
