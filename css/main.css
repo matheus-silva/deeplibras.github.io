@@ -103,12 +103,12 @@ html, body {
 	padding-bottom: 60px; /* Height of the footer */
 }
 
-.content .box-container, .content .page-container {
+.content .box-container {
 	text-align: center;
 	margin-top: 10px;
 }
 
-.content .box-container .box, .content .page-container .page {
+.content .box-container .box {
 	background-size: 100% 100%;
 	width: 300px;
 	height: 200px;
@@ -144,9 +144,24 @@ html, body {
 	text-shadow: none;
 }
 
+.content .box-container .box a:hover {
+	text-decoration: underline;
+}
+
+.content .box-container .box-event {
+	min-width: 400px;
+	width: 35%;
+	height: auto;
+}
+
+.content .box-container .box-event ul {
+	text-align: left;
+}
+
 .content .page-container .page {
 	width: 75%;
 	height: auto;	
+	padding: 20px;
 }
 
 .content .page-container .page h1 {
@@ -164,6 +179,50 @@ html, body {
 	text-align: center;
 	line-height: 1.5;
 	color: black;
+}
+
+.content .page-container .events-content {
+	width: 20%;
+	text-align: center;
+	background-color: blue;
+	margin: 0;
+	display: block;
+}
+
+.content .page-container .events-menu {
+	width: 20%;
+	text-align: center;
+	background-color: red;
+	margin: 0;
+	display: block;
+}
+
+.content .page-container .events-content div, .content .page-container .events-menu div {
+	width: 100%;
+}
+
+.content .page-container .page menu.ecsl_menu li {
+	float: left;
+	list-style: none;
+	display: inline;
+	padding: 10px 15px;
+}
+
+.content .page-container .page menu.ecsl_menu li a {
+	text-decoration: none;
+	color: #314559;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.content .page-container .page menu.ecsl_menu li a:hover {
+	background-color: #832e4f;
+	color: white;
+}
+
+.content .page-container .page menu.ecsl_menu li a.active {
+	background-color: #832e4f;
+	color: white;
 }
 
 /*********************************************

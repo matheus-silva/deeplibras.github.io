@@ -3,7 +3,7 @@
 	<script>
 		var section = window.location.hash.substr(1);
 		var default_ecsl = "201601";
-		var default_file = "gallery.html";
+		var default_file = "gallery";
 		var url;
 		
 		if(section != "ecsl"){
@@ -17,28 +17,24 @@
 			}
 			if(fields.length == 3) {
 				default_ecsl = fields[1];
-				default_file = fields[2] + ".html";
+				default_file = fields[2];
 			}
 		}
 		
-		url = default_ecsl + "/" + default_file;
-		//console.log("URL: " + url);
-		//console.log("Section: " + section);
+		url = default_ecsl + "/" + default_file + ".html";
 		
 		$.ajax({
 			url : "ecsl/" + url,
 			method : "GET"
 		}).done(function(data) {
-			//$("a[accesskey=" + section + "]").addClass("active");
+			$("a[accesskey=" + default_file + "]").addClass("active");
 			$(".ecsl_content").html(data);
 		});
 		
-		$(".ecsl_menu ul li a").each(function(){
+		$("menu.ecsl_menu ul li a").each(function(){
 			$(this).click(function(){
 				var page = $(this).attr("accesskey");
 				page = "ecsl/" + default_ecsl + "/" + page + ".html";
-				
-				//console.log(page);
 				
 				$.ajax({
 					url : "./" + page,
@@ -47,9 +43,13 @@
 						withCredentials : true
 					}
 				}).done(function(data) {
+					$("a[accesskey=" + default_file + "]")
 					$(".ecsl_content").html(data);
 				});
 				
+				$("menu.ecsl_menu ul li a").removeClass("active");
+				
+				$(this).addClass("active")
 			});
 			
 			var href = $(this).attr("href");
@@ -59,12 +59,12 @@
 
 	<div class="page">
 		<h1>ECSL</h1>
-		<div class="ecsl_menu">
+		<menu class="ecsl_menu">
 			<ul>
 				<li><a href="#apoio" title="Apoio" accesskey="apoio">Apoio</a></li>
 				<li><a href="#gallery" title="Galeria" accesskey="gallery">Galeria</a></li>
 			</ul>
-		</div>
+		</menu>
 		<div class="ecsl_content"></div>
 	</div>
 
