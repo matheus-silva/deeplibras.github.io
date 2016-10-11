@@ -1,0 +1,71 @@
+<div class="page-container">
+
+	<script>
+		var section = window.location.hash.substr(1);
+		var default_ecsl = "201601";
+		var default_file = "gallery.html";
+		var url;
+		
+		if(section != "ecsl"){
+			var fields = section.split("/");
+			if(fields.length == 2) {
+				if(/^[0-9]{6}/.test(fields[1])) {
+					default_ecsl = fields[1];
+				} else {
+					default_file = fields[1];
+				}
+			}
+			if(fields.length == 3) {
+				default_ecsl = fields[1];
+				default_file = fields[2] + ".html";
+			}
+		}
+		
+		url = default_ecsl + "/" + default_file;
+		//console.log("URL: " + url);
+		//console.log("Section: " + section);
+		
+		$.ajax({
+			url : "ecsl/" + url,
+			method : "GET"
+		}).done(function(data) {
+			//$("a[accesskey=" + section + "]").addClass("active");
+			$(".ecsl_content").html(data);
+		});
+		
+		$(".ecsl_menu ul li a").each(function(){
+			$(this).click(function(){
+				var page = $(this).attr("accesskey");
+				page = "ecsl/" + default_ecsl + "/" + page + ".html";
+				
+				//console.log(page);
+				
+				$.ajax({
+					url : "./" + page,
+					method : "GET",
+					xhrFields : {
+						withCredentials : true
+					}
+				}).done(function(data) {
+					$(".ecsl_content").html(data);
+				});
+				
+			});
+			
+			var href = $(this).attr("href");
+			$(this).attr("href", "#ecsl/" + default_ecsl + "/" + href.substring(1));
+		});
+	</script>
+
+	<div class="page">
+		<h1>ECSL</h1>
+		<div class="ecsl_menu">
+			<ul>
+				<li><a href="#apoio" title="Apoio" accesskey="apoio">Apoio</a></li>
+				<li><a href="#gallery" title="Galeria" accesskey="gallery">Galeria</a></li>
+			</ul>
+		</div>
+		<div class="ecsl_content"></div>
+	</div>
+
+</div>

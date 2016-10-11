@@ -1,0 +1,36 @@
+<div class="page-container">
+
+	<script>			
+		$(".events_menu ul li a").each(function() {
+			$(this).click(function() {
+				var attr = $(this).attr("href");
+				var page = "ecsl.html#" + attr;
+				
+				$.ajax({
+					url : "./" + page,
+					method : "GET",
+					xhrFields : {
+						withCredentials : true
+					}
+
+				}).done(function(data) {
+					$(".content").html(data);
+				});
+			
+			})
+		});
+	</script>
+
+	<div class="page">
+		<h1>Evento</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel viverra risus. Donec hendrerit aliquam sem, nec hendrerit ex pulvinar sed. Aenean eget venenatis ipsum. Nullam tincidunt dapibus lacinia. Praesent id gravida purus. Donec cursus, risus vel aliquam suscipit, lacus quam iaculis elit, sed malesuada ante velit eget orci. Vestibulum congue turpis sit amet nisi fermentum, ac pellentesque nulla malesuada. Etiam vulputate, orci id hendrerit tincidunt, purus ex semper magna, sit amet consequat dui ipsum at elit. Sed maximus tristique sagittis. Aliquam sed tempor nunc. </p>
+		
+		<div class="events_menu">
+			<ul>
+				<li><a href="#ecsl/201601" title="ECSL" accesskey="ecsl">ECSL 1</a></li>
+				<li><a href="#ecsl/201602" title="ECSL" accesskey="ecsl">ECSL 2</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>

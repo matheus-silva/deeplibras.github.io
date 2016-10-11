@@ -21,16 +21,20 @@ $(function() {
 			$(this).addClass("active");
 		})
 	});
-
+	
 	var url = "about.html";
 
 	var section = window.location.hash.substr(1);
 	
-	if (section != "")
+	if (section.startsWith("ecsl")) {
+		url = "ecsl.html#" + section.substring(section.indexOf("/"));
+		section = "ecsl";
+	} else if (section != "") {
 		url = section + ".html";
-	else
+	} else {
 		section = "about";
-
+	}
+	
 	$.ajax({
 		url : url,
 		method : "GET"

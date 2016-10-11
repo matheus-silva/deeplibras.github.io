@@ -103,13 +103,12 @@ html, body {
 	padding-bottom: 60px; /* Height of the footer */
 }
 
-
-.content .box-container {
+.content .box-container, .content .page-container {
 	text-align: center;
 	margin-top: 10px;
 }
 
-.content .box-container .box {
+.content .box-container .box, .content .page-container .page {
 	background-size: 100% 100%;
 	width: 300px;
 	height: 200px;
@@ -143,6 +142,28 @@ html, body {
 	font-weight: bold;
 	color: #CC0000;
 	text-shadow: none;
+}
+
+.content .page-container .page {
+	width: 75%;
+	height: auto;	
+}
+
+.content .page-container .page h1 {
+	font-size: 36pt;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+	color: #832e4f;
+	padding-bottom: 5px;
+}
+
+.content .page-container .page p {
+	text-align: left;
+	font-size: medium;
+	text-align: center;
+	line-height: 1.5;
+	color: black;
 }
 
 /*********************************************
