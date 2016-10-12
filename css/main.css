@@ -148,81 +148,89 @@ html, body {
 	text-decoration: underline;
 }
 
-.content .box-container .box-event {
+.content .box-container .box-half {
 	min-width: 400px;
 	width: 35%;
 	height: auto;
 }
 
-.content .box-container .box-event ul {
-	text-align: left;
-}
-
-.content .page-container .page {
+.content .box-container .box-full {
+	min-width: 400px;
 	width: 75%;
-	height: auto;	
-	padding: 20px;
+	height: auto;
 }
 
-.content .page-container .page h1 {
-	font-size: 36pt;
-	font-weight: bold;
-	width: 100%;
-	text-align: center;
-	color: #832e4f;
-	padding-bottom: 5px;
-}
-
-.content .page-container .page p {
+.content .event-container .box ul {
 	text-align: left;
+	list-style: none;
+}
+
+.content .ecsl-container .box ul {
 	font-size: medium;
-	text-align: center;
+	text-align: left;
 	line-height: 1.5;
 	color: black;
-}
-
-.content .page-container .events-content {
-	width: 20%;
-	text-align: center;
-	background-color: blue;
-	margin: 0;
-	display: block;
-}
-
-.content .page-container .events-menu {
-	width: 20%;
-	text-align: center;
-	background-color: red;
-	margin: 0;
-	display: block;
-}
-
-.content .page-container .events-content div, .content .page-container .events-menu div {
-	width: 100%;
-}
-
-.content .page-container .page menu.ecsl_menu li {
-	float: left;
 	list-style: none;
+}
+
+/*********************************************
+ * Gallery
+ *********************************************/
+
+.box-container .gallery div {
+	width: 340px;
+	height: auto;
+	
+	margin: 0 auto;
+}
+
+.box-container .gallery ul {
+	padding: 0;
+	display: inline-table;
+}
+
+.box-container .gallery ul li {
+	text-align: center;
 	display: inline;
-	padding: 10px 15px;
+}
+ 
+.box-container .gallery ul li img {
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	padding: 0;
 }
 
-.content .page-container .page menu.ecsl_menu li a {
-	text-decoration: none;
-	color: #314559;
+.box-container .gallery button {
+	cursor: pointer;
+	visibility: visible;
+	font-family: "Raleway";
+	font-size: 12pt;
 	font-weight: bold;
-	padding: 10px;
+	color: #314559;
+	background: none;
+	border: 0;
+	padding: 10px;	
 }
 
-.content .page-container .page menu.ecsl_menu li a:hover {
+.box-container .gallery button:hover {
 	background-color: #832e4f;
 	color: white;
 }
 
-.content .page-container .page menu.ecsl_menu li a.active {
-	background-color: #832e4f;
-	color: white;
+.box-container .gallery button:disabled {
+	color: #eee;
+	visibility: hidden;
+}
+
+.box-container .gallery button.galleryPrevious {
+	float: left;
+	margin-left: 20px;
+}
+
+.box-container .gallery button.galleryNext {
+	float: right;
+	margin-right: 20px;
 }
 
 /*********************************************

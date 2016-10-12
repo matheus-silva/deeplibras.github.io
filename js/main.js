@@ -27,7 +27,7 @@ $(function() {
 	var section = window.location.hash.substr(1);
 	
 	if (section.startsWith("ecsl")) {
-		url = "ecsl.html#" + section.substring(section.indexOf("/"));
+		url = "ecsl/" + section.substring(section.indexOf("/") + 1) + "/ecsl.html";
 		section = "ecsl";
 	} else if (section != "") {
 		url = section + ".html";

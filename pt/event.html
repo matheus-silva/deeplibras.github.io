@@ -1,10 +1,11 @@
-<div class="box-container">
+<div class="box-container event-container">
 
 	<script>			
-		$("menu.box-event ul li a").each(function() {
+		$(".box-container menu ul li a").each(function() {
 			$(this).click(function() {
 				var attr = $(this).attr("href");
-				var page = "ecsl.html#" + attr;
+				attr = attr.substring(1);
+				var page = attr + "/ecsl.html";
 				
 				$.ajax({
 					url : "./" + page,
@@ -21,11 +22,11 @@
 		});
 	</script>
 
-	<div class="box box-event">
+	<div class="box box-half">
 		<h1>Sobre o ECSL</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel viverra risus. Donec hendrerit aliquam sem, nec hendrerit ex pulvinar sed. Aenean eget venenatis ipsum. Nullam tincidunt dapibus lacinia. Praesent id gravida purus. Donec cursus, risus vel aliquam suscipit, lacus quam iaculis elit, sed malesuada ante velit eget orci. Vestibulum congue turpis sit amet nisi fermentum, ac pellentesque nulla malesuada. Etiam vulputate, orci id hendrerit tincidunt, purus ex semper magna, sit amet consequat dui ipsum at elit. Sed maximus tristique sagittis. Aliquam sed tempor nunc. </p>
 	</div>
-	<menu class="box box-event">
+	<menu class="box">
 		<h1>Eventos</h1>
 		<ul>
 			<li><a href="#ecsl/201602" title="ECSL" accesskey="ecsl">ECSL 2 - 2º semestre de 2016</a></li>
