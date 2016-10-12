@@ -7,6 +7,7 @@ var ulEvent;
 function loadPage(pages, page) {
 	pages.toggle();
 	pages.eq(page).show();
+	galleryPage = page;
 }
 
 // Gallery pagination
