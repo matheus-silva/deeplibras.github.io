@@ -216,6 +216,7 @@ html, body {
 
 .box-container .gallery ul {
 	padding: 0;
+	margin: 0;
 	display: inline-table;
 }
 
@@ -241,6 +242,7 @@ html, body {
 	background: none;
 	border: 0;
 	padding: 10px;	
+	margin: 0;
 }
 
 .box-container .gallery button:hover {
