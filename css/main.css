@@ -217,7 +217,7 @@ html, body {
 .box-container .gallery ul {
 	padding: 0;
 	margin: 0;
-	display: inline-table;
+	display: inline-block;
 }
 
 .box-container .gallery ul li {
