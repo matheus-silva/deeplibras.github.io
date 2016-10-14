@@ -8,6 +8,7 @@ function loadPage(pages, page) {
 	pages.toggle();
 	pages.eq(page).show();
 	galleryPage = page;
+	eventsPage = page;
 }
 
 // Gallery pagination

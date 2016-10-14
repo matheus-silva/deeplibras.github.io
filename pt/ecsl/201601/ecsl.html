@@ -7,10 +7,12 @@
 			loadPage(ulGallery, 0);
 			verifyGalleryButton();
 			
+			// Update the image's path
 			var section = window.location.hash.substr(1);
+			var ecsl = section.substr(section.indexOf("/") + 1);
 			$(".gallery ul li a").each(function() {
-				var href = $(this).attr("href");
-				$(this).attr("href", section + "/" + href);
+				var href = $(this).attr("href").substr(1);
+				$(this).attr("href", "../gallery/" + ecsl + "/" + href);
 			});
 			
 			$(".gallery").magnificPopup({
@@ -50,19 +52,19 @@
 		<h1>Galeria</h1>
 		<div>
 			<ul>
-				<li><a href="images/image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
-				<li><a href="images/image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
-				<li><a href="images/image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
-				<li><a href="images/image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
-				<li><a href="images/image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
-				<li><a href="images/image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
+				<li><a href="#image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
+				<li><a href="#image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
+				<li><a href="#image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
+				<li><a href="#image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
+				<li><a href="#image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
+				<li><a href="#image-01.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo1"></a></li>
 			</ul>
 			<ul>
-				<li><a href="images/image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
-				<li><a href="images/image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
-				<li><a href="images/image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
-				<li><a href="images/image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
-				<li><a href="images/image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
+				<li><a href="#image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
+				<li><a href="#image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
+				<li><a href="#image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
+				<li><a href="#image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
+				<li><a href="#image-02.jpg" rel="lightbox" data-lightbox="image-gallery"><img src="https://unsplash.it/200/300/?random" alt="Texto alternativo2"></a></li>
 			</ul>
 		</div>
 		<button class="galleryPrevious" onclick="galleryPreviousPage()">Anterior</button>
