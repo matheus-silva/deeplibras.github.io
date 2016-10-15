@@ -3,7 +3,9 @@
 	<script>			
 		$(".box-container menu ul li a").each(function() {
 			$(this).click(function() {
-				var page = "/ecsl.html";
+				var attr = $(this).attr("href");
+				attr = attr.substring(1);
+				var page = attr + "/ecsl.html";
 				
 				$.ajax({
 					url : "./" + page,
@@ -16,8 +18,12 @@
 					$(".content").html(data);
 				});
 			
-			})
+			});
 		});
+		// Start event in page 1
+		ulEvent = $('.event ul');
+		loadPage(ulEvent, 0);
+		verifyEventsButton();
 	</script>
 
 	<div class="box box-half">
@@ -25,12 +31,16 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel viverra risus. Donec hendrerit aliquam sem, nec hendrerit ex pulvinar sed. Aenean eget venenatis ipsum. Nullam tincidunt dapibus lacinia. Praesent id gravida purus. Donec cursus, risus vel aliquam suscipit, lacus quam iaculis elit, sed malesuada ante velit eget orci. Vestibulum congue turpis sit amet nisi fermentum, ac pellentesque nulla malesuada. Etiam vulputate, orci id hendrerit tincidunt, purus ex semper magna, sit amet consequat dui ipsum at elit. Sed maximus tristique sagittis. Aliquam sed tempor nunc. </p>
 	</div>
 	
-	<menu class="box box-half" style="height: auto">
+	<menu class="box box-half event" style="height: auto">
 		<h1>Eventos</h1>
 		<ul>
 			<li><a href="#ecsl/201602" title="ECSL" accesskey="ecsl">2º Encontro para Coleta de Sinais da LIBRAS (15/11/2016)</a></li>
+		</ul>
+		<ul>
 			<li><a href="#ecsl/201601" title="ECSL" accesskey="ecsl">1º Encontro para Coleta de Sinais da LIBRAS (19/05/2016)</a></li>
 		</ul>
+		<button class="eventsPrevious" onclick="eventsPreviousPage()">Anterior</button>
+		<button class="eventsNext next" onclick="eventsNextPage()">Próximo</button>
 	</menu>
 	
 </div>

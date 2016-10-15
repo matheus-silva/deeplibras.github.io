@@ -163,6 +163,12 @@ html, body {
 .content .event-container .box ul {
 	text-align: left;
 	list-style: none;
+	font-size: 11pt;
+	font-weight: normal;
+}
+
+.content .event-container .box ul li {
+	line-height: 25px;
 }
 
 .content .ecsl-container .box ul {
@@ -204,7 +210,7 @@ html, body {
 }
 
 /*********************************************
- * Gallery
+ * Gallery and Events
  *********************************************/
 
 .box-container .gallery div {
@@ -232,7 +238,7 @@ html, body {
 	padding: 0;
 }
 
-.box-container .gallery button {
+.box-container .gallery button, .box-container .event button {
 	cursor: pointer;
 	visibility: visible;
 	font-family: "Raleway";
@@ -245,22 +251,22 @@ html, body {
 	margin: 0;
 }
 
-.box-container .gallery button:hover {
+.box-container .gallery button:hover, .box-container .event button:hover {
 	background-color: #832e4f;
 	color: white;
 }
 
-.box-container .gallery button:disabled {
+.box-container .gallery button:disabled, .box-container .event button:disabled {
 	color: #eee;
 	visibility: hidden;
 }
 
-.box-container .gallery button.galleryPrevious {
+.box-container .gallery button.galleryPrevious, .box-container .event button.eventsPrevious {
 	float: left;
 	margin-left: 20px;
 }
 
-.box-container .gallery button.galleryNext {
+.box-container .gallery button.galleryNext, .box-container .event button.eventsNext {
 	float: right;
 	margin-right: 20px;
 }
