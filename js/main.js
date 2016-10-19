@@ -43,3 +43,57 @@ $(function() {
 		$(".content").html(data);
 	});
 });
+
+function event_start($) {
+	// Create the links to the ECSL pages
+	$(".box-container menu ul li a").each(function() {
+		$(this).click(function() {
+			var attr = $(this).attr("href");
+			attr = attr.substring(1);
+			var page = attr + "/ecsl.html";
+			
+			$.ajax({
+				url : "./" + page,
+				method : "GET",
+				xhrFields : {
+					withCredentials : true
+				}
+
+			}).done(function(data) {
+				$(".content").html(data);
+			});
+		
+		});
+	});
+	
+	// Start event in page 1
+	ulEvent = $('.event ul');
+	loadPage(ulEvent, 0);
+	verifyEventsButton();
+}
+
+function ecsl_start($) {
+	// Start gallery in page 1
+	ulGallery = $('.gallery ul');
+	loadPage(ulGallery, 0);
+	verifyGalleryButton();
+	
+	// Update the image's path
+	var section = window.location.hash.substr(1);
+	var ecsl = section.substr(section.indexOf("/") + 1);
+	$(".gallery ul li a").each(function() {
+		var href = $(this).attr("href").substr(1);
+		$(this).attr("href", "../gallery/" + ecsl + "/" + href);
+	});
+	
+	// Start the plugin responsible for showing the image 
+	$(".gallery").magnificPopup({
+		delegate: 'a',
+		type: "image",
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [1, 3]
+		}
+	});
+}

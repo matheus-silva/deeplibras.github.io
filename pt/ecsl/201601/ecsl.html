@@ -1,31 +1,7 @@
 <div class="box-container ecsl-container">
 	
 	<script type="text/javascript">
-		jQuery().ready(function($) {
-			// Start gallery in page 1
-			ulGallery = $('.gallery ul');
-			loadPage(ulGallery, 0);
-			verifyGalleryButton();
-			
-			// Update the image's path
-			var section = window.location.hash.substr(1);
-			var ecsl = section.substr(section.indexOf("/") + 1);
-			$(".gallery ul li a").each(function() {
-				var href = $(this).attr("href").substr(1);
-				$(this).attr("href", "../gallery/" + ecsl + "/" + href);
-			});
-			
-			// Start the plugin responsible for showing the image 
-			$(".gallery").magnificPopup({
-				delegate: 'a',
-				type: "image",
-				gallery: {
-					enabled: true,
-					navigateByImgClick: true,
-					preload: [1, 3]
-				}
-			});
-		});
+		jQuery().ready(ecsl_start(jQuery));
 	</script>
 	
 	<h1>1º Encontro para a Coleta de Sinais de Libras</h1>
@@ -47,7 +23,6 @@
 			<li>Qual é o seu nome?</li>
 		</ul>
 	</div>
-	
 	<div class="box box-half gallery">
 		<h1>Galeria</h1>
 		<div>
@@ -81,6 +56,7 @@
 			<li>Luciana Brasil Rebelo dos Santos</li>
 			<li>Matheus da Silva Ferreira</li>
 			<li>Rodrigo Briet</li>
+			
 		</ul>
 	</div>
 	

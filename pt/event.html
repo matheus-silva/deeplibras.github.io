@@ -1,29 +1,7 @@
 <div class="box-container event-container">
 
 	<script>			
-		$(".box-container menu ul li a").each(function() {
-			$(this).click(function() {
-				var attr = $(this).attr("href");
-				attr = attr.substring(1);
-				var page = attr + "/ecsl.html";
-				
-				$.ajax({
-					url : "./" + page,
-					method : "GET",
-					xhrFields : {
-						withCredentials : true
-					}
-
-				}).done(function(data) {
-					$(".content").html(data);
-				});
-			
-			});
-		});
-		// Start event in page 1
-		ulEvent = $('.event ul');
-		loadPage(ulEvent, 0);
-		verifyEventsButton();
+		jQuery.ready(event_start(jQuery));
 	</script>
 
 	<div class="box box-half">
@@ -35,8 +13,6 @@
 		<h1>Eventos</h1>
 		<ul>
 			<li><a href="#ecsl/201602" title="ECSL" accesskey="ecsl">2º Encontro para Coleta de Sinais da LIBRAS (15/11/2016)</a></li>
-		</ul>
-		<ul>
 			<li><a href="#ecsl/201601" title="ECSL" accesskey="ecsl">1º Encontro para Coleta de Sinais da LIBRAS (19/05/2016)</a></li>
 		</ul>
 		<button class="eventsPrevious" onclick="eventsPreviousPage()">Anterior</button>
