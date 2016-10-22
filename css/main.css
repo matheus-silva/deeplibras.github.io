@@ -172,11 +172,11 @@ html, body {
 }
 
 .content .ecsl-container .box ul {
-	font-size: medium;
 	text-align: left;
+	list-style: none;
+	font-size: medium;
 	line-height: 1.5;
 	color: black;
-	list-style: none;
 }
 
 .content .ecsl-container .apoio a {
@@ -216,7 +216,6 @@ html, body {
 .box-container .gallery div {
 	width: 340px;
 	height: auto;
-	
 	margin: 0 auto;
 }
 
